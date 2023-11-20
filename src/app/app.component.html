@@ -1,3 +1,4 @@
-<div>
-  <app-password-input></app-password-input>
-</div>
+    <form class="main" [formGroup]="passwordForm">
+      <app-password-input formControlName="password"></app-password-input>
+      <app-password-strength-indicator [strength]="passwordStrength"></app-password-strength-indicator>
+    </form>

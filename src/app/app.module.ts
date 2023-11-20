@@ -1,20 +1,22 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
-import { PasswordInputComponent } from './password-input/password-input.component';
+import { AppComponent } from '@app/app.component';
+import { PasswordInputComponent } from '@components/password-input/password-input.component';
+import { PasswordStrengthIndicatorComponent } from '@components/password-strength/password-strength.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PasswordInputComponent,
+    PasswordStrengthIndicatorComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
